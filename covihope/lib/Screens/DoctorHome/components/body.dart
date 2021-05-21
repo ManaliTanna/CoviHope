@@ -2,6 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:covihope/Screens/Appointments/Appointments.dart';
 import 'package:covihope/Screens/forums/forums.dart';
+
+import 'package:covihope/Screens/Donation/Donation.dart';
+import 'package:covihope/Screens/Emergency/Emergency.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/constants.dart';
 import 'package:covihope/components/cards.dart';
@@ -74,7 +77,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return Appointments(); //Add Emergency here
+                            return Emergency(); //Add Emergency here
                           },
                         ),
                       );
@@ -108,7 +111,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return Appointments(); //Add donate screen here
+                            return Donation(); //Add donate screen here
                           },
                         ),
                       );
