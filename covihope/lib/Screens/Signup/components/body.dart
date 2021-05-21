@@ -1,3 +1,5 @@
+import 'package:covihope/Screens/DoctorHome/doctor_home_screen.dart';
+import 'package:covihope/Screens/UserHome/user_home_screen.dart';
 import 'package:covihope/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/Screens/Login/login_screen.dart';
@@ -16,7 +18,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var showvalue;
+    dynamic doctorvalue;
     return Background(
       child: SingleChildScrollView(
         child: Column(
@@ -25,13 +27,15 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             Text(
               "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
               "assets/icons/signup.svg",
               height: size.height * 0.35,
             ),
+            SizedBox(height: size.height * 0.03),
             RoundedInputField(
               hintText: "Name",
               onChanged: (name) {
@@ -71,20 +75,32 @@ class Body extends StatelessWidget {
               ],
               onToggle: (index) {
                 print('switched to: $index');
+                doctorvalue = index;
               },
             ),
             SizedBox(height: 20),
             RoundedButton(
               text: "SIGNUP",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen(); //Add the next screen here
-                    },
-                  ),
-                );
+                if (doctorvalue == 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DoctorHomeScreen(); //Add the next screen here
+                      },
+                    ),
+                  );
+                } else if (doctorvalue == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return UserHomeScreen(); //Add the next screen here
+                      },
+                    ),
+                  );
+                }
               },
             ),
             SizedBox(height: size.height * 0.03),

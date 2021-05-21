@@ -1,5 +1,6 @@
 import 'package:covihope/Screens/DoctorHome/doctor_home_screen.dart';
 import 'package:covihope/Screens/UserHome/user_home_screen.dart';
+import 'package:covihope/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/Screens/Login/components/background.dart';
 import 'package:covihope/Screens/Signup/signup_screen.dart';
@@ -16,6 +17,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    dynamic doctorvalue;
     Size size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
@@ -24,7 +26,8 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Text(
               "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
@@ -36,6 +39,7 @@ class Body extends StatelessWidget {
               hintText: "Your Email",
               onChanged: (email) {
                 print('Email is : $email');
+                doctorvalue = email;
               },
             ),
             RoundedPasswordField(
@@ -46,14 +50,25 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "LOGIN",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return UserHomeScreen();
-                    },
-                  ),
-                );
+                if (doctorvalue == "doctor@gmail.com") {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DoctorHomeScreen(); //Add the next screen here
+                      },
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return UserHomeScreen(); //Add the next screen here
+                      },
+                    ),
+                  );
+                }
               },
             ),
             SizedBox(height: size.height * 0.03),
