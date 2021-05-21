@@ -9,6 +9,8 @@ INDIA WILL BREATHE AGAIN
 - Milinda KN
 - Manali Tanna
 
+![Logo](logo.png)
+
 ## Abstract
 
 With the surge in cases in the second wave of COVID-19 in India, there is an unavailability of beds, and hospitals are forced to reject patients. The vulnerable population is crucially affected by this, they do not have the means or the money to use other avenues to cater to their needs..
