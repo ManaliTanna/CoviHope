@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:covihope/Screens/ConsultDoctor/ConsultDoctor.dart';
 import 'package:covihope/Screens/ContactFrontline/contact_frontline.dart';
+import 'package:covihope/Screens/VaccineDrive/VaccineDrives.dart';
 import 'package:covihope/Screens/forums/forums.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/constants.dart';
@@ -55,7 +57,14 @@ class Body extends StatelessWidget {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      print("onTap called.");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ConsultDoctors();
+                          },
+                        ),
+                      );
                     },
                     child: Cards(
                       name: 'Consult\nDoctor',
@@ -65,7 +74,14 @@ class Body extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      print("onTap called");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return VaccineDrives();
+                          },
+                        ),
+                      );
                     },
                     child: Cards(
                       name: 'Vaccine\nDrives',
@@ -79,7 +95,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return Forums(); //Add the next screen here
+                            return Forums();
                           },
                         ),
                       );
@@ -96,7 +112,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return ContactFrontline(); //Add the next screen here
+                            return ContactFrontline();
                           },
                         ),
                       );
