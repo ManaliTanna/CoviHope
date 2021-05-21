@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:covihope/Screens/ContactFrontline/contact_frontline.dart';
+import 'package:covihope/Screens/forums/forums.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/constants.dart';
 import 'package:covihope/components/cards.dart';
@@ -74,7 +75,14 @@ class Body extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      //
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Forums(); //Add the next screen here
+                          },
+                        ),
+                      );
                     },
                     child: Cards(
                       name: 'Forum',

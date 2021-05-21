@@ -4,7 +4,7 @@ import 'package:covihope/constants.dart';
 // ignore: unused_import
 import 'package:covihope/Screens/forums/components/body.dart';
 
-class forums extends StatelessWidget {
+class Forums extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
