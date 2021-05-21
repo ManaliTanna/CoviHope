@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:covihope/Screens/Appointments/Appointments.dart';
 import 'package:covihope/Screens/forums/forums.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/constants.dart';
@@ -43,9 +44,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: 36),
 
-            // Make a horizontal Listview
-
-            //Consult Doctor Card
+            // Horizontal Listview
 
             Container(
               height: 190,
@@ -54,21 +53,18 @@ class Body extends StatelessWidget {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      print("onTap called.");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Appointments();
+                          },
+                        ),
+                      );
                     },
                     child: Cards(
                       name: 'My Appointments',
-                      icon: FontAwesomeIcons.heartbeat,
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      print("onTap called");
-                    },
-                    child: Cards(
-                      name: 'Emergency Help',
-                      icon: FontAwesomeIcons.syringe,
+                      icon: FontAwesomeIcons.handHoldingMedical,
                       color: kPrimaryColor,
                     ),
                   ),
@@ -78,20 +74,44 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return Forums(); //Add the next screen here
+                            return Appointments(); //Add Emergency here
+                          },
+                        ),
+                      );
+                    },
+                    child: Cards(
+                      name: 'Emergency Help',
+                      icon: FontAwesomeIcons.solidHospital,
+                      color: kPrimaryColor,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Forums();
                           },
                         ),
                       );
                     },
                     child: Cards(
                       name: 'Forum',
-                      icon: FontAwesomeIcons.ambulance,
+                      icon: FontAwesomeIcons.envelopeOpenText,
                       color: kPrimaryColor,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      //
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Appointments(); //Add donate screen here
+                          },
+                        ),
+                      );
                     },
                     child: Cards(
                       name: 'Donate',
@@ -106,7 +126,7 @@ class Body extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset("assets/images/precautions.png",
+                Image.asset("assets/images/Frontline.png",
                     width: 315, height: 330, fit: BoxFit.fill),
               ],
             ),
