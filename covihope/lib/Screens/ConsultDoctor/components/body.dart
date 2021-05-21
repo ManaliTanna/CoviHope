@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
   List<String> notes = [
-    "Dr.Ahemad\n19/02/2020",
-    "Dr.Swati\n16/02/2020",
-    "Dr.Milinda\n16/02/2020",
-    "Dr.Mariyah\n20/02/2020",
+    "18/02/2020\nAlcool-Tabac Drogues",
+    "17/02/2020\nFibromyagile",
+    "16/02/2020\nFatigue-Chronic",
+    "20/02/2020\nEnvironment",
   ];
 
   //Body(this.notes);
