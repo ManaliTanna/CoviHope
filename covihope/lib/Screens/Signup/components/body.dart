@@ -18,6 +18,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: size.height * 0.03),
             Text(
               "SIGNUP",
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -29,14 +30,27 @@ class Body extends StatelessWidget {
             ),
             RoundedInputField(
               hintText: "Your Email",
-              onChanged: (value) {},
+              onChanged: (email) {
+                print('Email Id is: $email');
+              },
             ),
             RoundedPasswordField(
-              onChanged: (value) {},
+              onChanged: (password) {
+                print('Password is: $password');
+              },
             ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen(); //Add the next screen here
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(

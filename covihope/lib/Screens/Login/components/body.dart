@@ -1,3 +1,4 @@
+import 'package:covihope/Screens/UserHome/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/Screens/Login/components/background.dart';
 import 'package:covihope/Screens/Signup/signup_screen.dart';
@@ -32,14 +33,27 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
               hintText: "Your Email",
-              onChanged: (value) {},
+              onChanged: (email) {
+                print('Email is : $email');
+              },
             ),
             RoundedPasswordField(
-              onChanged: (value) {},
+              onChanged: (password) {
+                print('Email is : $password');
+              },
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return UserHomeScreen();
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
