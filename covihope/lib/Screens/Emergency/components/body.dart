@@ -4,7 +4,8 @@ class Body extends StatelessWidget {
   List<String> notes = [
     "Manipal Hospital\n 1Km Away",
     "Fortis\n10 2Km Away",
-    
+    "Apollo\n10 3Km Away",
+    "H B S Hospital\n10 4Km Away"
   ];
 
   //Body(this.notes);
