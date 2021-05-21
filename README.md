@@ -10,7 +10,7 @@ INDIA WILL BREATHE AGAIN
 - Manali Tanna
 
 <p align="center">
-  <img width="460" height="300" src="logo.png">
+  <img src="logo.png">
 </p>
 
 ## Abstract
