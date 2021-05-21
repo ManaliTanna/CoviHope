@@ -26,6 +26,7 @@ dependencies:
   flutter_svg: ^0.19.1
   font_awesome_flutter: ^9.0.0
   toggle_switch: ^0.1.9
+  flutter_search_bar: ^2.1.0
 
 dev_dependencies:
   flutter_test:
