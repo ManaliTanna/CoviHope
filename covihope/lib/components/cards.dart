@@ -42,7 +42,7 @@ class Cards extends StatelessWidget {
             child: Material(
               elevation: 4,
               borderRadius: BorderRadius.circular(12),
-              color: kPrimaryLightColor,
+              color: color,
               child: Container(
                 height: 84,
                 width: 84,

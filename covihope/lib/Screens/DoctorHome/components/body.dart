@@ -56,7 +56,7 @@ class Body extends StatelessWidget {
                       print("onTap called.");
                     },
                     child: Cards(
-                      name: 'Consult\nDoctor',
+                      name: 'My Appointments',
                       icon: FontAwesomeIcons.heartbeat,
                       color: kPrimaryColor,
                     ),
@@ -66,7 +66,7 @@ class Body extends StatelessWidget {
                       print("onTap called");
                     },
                     child: Cards(
-                      name: 'Vaccine\nDrives',
+                      name: 'Emergency Help',
                       icon: FontAwesomeIcons.syringe,
                       color: kPrimaryColor,
                     ),
@@ -77,7 +77,7 @@ class Body extends StatelessWidget {
                     },
                     child: Cards(
                       name: 'Forum',
-                      icon: FontAwesomeIcons.envelopeOpenText,
+                      icon: FontAwesomeIcons.ambulance,
                       color: kPrimaryColor,
                     ),
                   ),
@@ -95,7 +95,6 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: 36),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

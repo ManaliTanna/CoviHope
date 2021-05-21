@@ -1,3 +1,4 @@
+import 'package:covihope/Screens/DoctorHome/doctor_home_screen.dart';
 import 'package:covihope/Screens/UserHome/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/Screens/Login/components/background.dart';
