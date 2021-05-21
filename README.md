@@ -9,7 +9,9 @@ INDIA WILL BREATHE AGAIN
 - Milinda KN
 - Manali Tanna
 
-![Logo](logo.png)
+<p align="center">
+  <img width="460" height="300" src="logo.png">
+</p>
 
 ## Abstract
 
