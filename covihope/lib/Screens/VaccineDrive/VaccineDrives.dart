@@ -2,7 +2,7 @@ import 'package:covihope/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:covihope/constants.dart';
 // ignore: unused_import
-import 'package:covihope/Screens/forums/components/body.dart';
+import 'package:covihope/Screens/VaccineDrive/components/body.dart';
 
 class VaccineDrives extends StatelessWidget {
   @override
