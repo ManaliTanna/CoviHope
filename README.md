@@ -25,7 +25,7 @@ The App was developed during BUILD AGAINST THE VIRUS (a virtual hackathon) hoste
 
 Here is the video demo of CoviHope -
 
-![Video Demo]()
+![Video Demo](http://bit.ly/CoviHope-VideoDemo)
 
 ## Tech Stack
 
