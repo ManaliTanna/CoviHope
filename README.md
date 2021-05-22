@@ -22,11 +22,6 @@ Introducing our idea - **CoviHope**. Our idea revolves around the concept of uti
 
 
 The App was developed during BUILD AGAINST THE VIRUS (a virtual hackathon) hosted by ACM-W. we will continue to work on it to help the community in any way we can, pull requests ae always welcome :)
- 
-
-Here is the UI/UX of CoviHope -
-
-![UI/UX Model]()
 
 Here is the video demo of CoviHope -
 
